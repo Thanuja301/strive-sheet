@@ -1,0 +1,23 @@
+from typing import List
+
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        st = set()
+        for num in nums:
+            st.add(num)
+        
+        # Now, 'st' contains unique elements, but order is not guaranteed
+        k = len(st)
+        j = 0
+        for x in st:
+            nums[j] = x
+            j += 1
+        return k  # This should be indented inside the method
+
+if __name__ == "__main__":
+    arr = [1, 1, 2]
+    solution = Solution()  # Creating an instance of Solution
+    k = solution.removeDuplicates(arr)  # Using the method with the instance
+    print("nums=")
+    for i in range(k):
+        print(arr[i], end=" ")
