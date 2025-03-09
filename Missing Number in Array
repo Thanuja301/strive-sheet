@@ -12,7 +12,3 @@ class Solution:
         # The missing number is the difference between the expected sum and the sum of elements
         return sum_of_range - sum_of_nums
 
-# Example usage:
-nums = [3, 0, 1]  # Example input
-solution = Solution()  # Create an instance of the Solution class
-print(solution.missingNumber(nums))  # Output: 2
